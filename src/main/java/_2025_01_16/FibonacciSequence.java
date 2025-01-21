@@ -5,10 +5,13 @@ public class FibonacciSequence {
     private int length;
 
     public FibonacciSequence(int length) {
-        this.length = length;
+        setLength(length);
     }
 
     public void setLength(int length) {
+        if (length < 0) {
+            throw new IllegalArgumentException("Not possible.");
+        }
         this.length = length;
     }
 
